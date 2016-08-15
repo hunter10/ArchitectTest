@@ -31,7 +31,8 @@ public class SlotterParent : MonoBehaviour {
 	virtual public void Awake()
 	{
 		Debug.Log ("Awake!!");
-	}
+        SetPlayEndEventState((int)ePlayEndEventState.EventStart);
+    }
 
 	virtual public int GetPlayEndEventState()
 	{
@@ -108,7 +109,8 @@ public class SlotterParent : MonoBehaviour {
 		{
 			Debug.Log ("UpdateEndDelay...");
 			m_fUpdateTime = 0.0f;
-		}
+            SetPlayEndEventState((int)ePlayEndEventState.None);
+        }
 	}
 
 }
